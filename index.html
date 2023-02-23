@@ -23,7 +23,6 @@
 
     <div class="column" id="right-column">
         <div id="phone-display-container">
-            <!-- <canvas id="phone-display"> -->
                 <div id="import-button">
                     <input type="button" id="import-image-button" value="Import Image" onclick="import()" >
                 </div>
@@ -32,19 +31,22 @@
                     <p id="text">Opacity</p>
                     <input type="range" name="filter-strength" min="1" max="10" id="range">
                 </div>
-                <!-- <label type="text" id="filter-name" value="name" disabled> -->
-                    <div id="filter-container">
-                        <label id="filter-name">Name</label>
-                    
-                    
-                <div id="button-container">
-                    <input type="button" value="filter1" id="filter1" class="filter-button" onclick="filter1()">
-                    <input type="button" value="filter2" id="filter2" class="filter-button" onclick="filter1()">
-                    <input type="button" value="filter3" id="filter3" class="filter-button" onclick="filter1()">
-                    <input type="button" value="filter4" id="filter4" class="filter-button" onclick="filter1()">
+            
+                <div class="grid">
+                    <div class="grid-item-label"><label class="label">name</label></div>
+                    <div class="grid-item-label"><label class="label">name</label></div>
+                    <div class="grid-item-label"><label class="label">name</label></div>
+                    <div class="grid-item-label"><label class="label">name</label></div>
+
+                    <input type="button" value="filter1" id="filter1" class="grid-item-button" onclick="filter1()">
+                    <input type="button" value="filter1" id="filter1" class="grid-item-button" onclick="filter1()">
+                    <input type="button" value="filter1" id="filter1" class="grid-item-button" onclick="filter1()">
+                    <input type="button" value="filter1" id="filter1" class="grid-item-button" onclick="filter1()">
+
                 </div>
+                
+                
             </div>
-            <!-- </canvas> -->
         </div>
       
     </div>
