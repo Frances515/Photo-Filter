@@ -53,12 +53,30 @@ body{
    
 }
 
+#phone-display-container{
+    /* padding: 30px; */
+    text-align: center;
+    padding-top: 80px; 
+    background-color: black;
+    width: 420px;
+    height: 750px;
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
 #phone-display{
     background-color: antiquewhite;
     width: 411px;
     height: 731px;
-    
    
+}
+
+#phone-screen{
+    background-color: blueviolet;
+    width: 400px;
+    height: 500px;
 }
 
 /* #page-title{
