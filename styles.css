@@ -79,6 +79,10 @@ body{
     height: 500px;
 }
 
+#slider #text{
+    color: #fff;
+}
+
 /* #page-title{
     background-color: coral;
     width: 100%;
