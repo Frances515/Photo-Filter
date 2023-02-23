@@ -7,25 +7,29 @@ body{
     overflow-y: hidden;
 }
 
-/* .column{
+.column{
     width: 50%;
     float: left;
     height: 100vh;
+    padding: 20px;
     
-} */
+}
+
 
 #left-column{
     background-color: red;
-    width: 50%;
+    /* width: 50%;
     float: left;
     height: 100vh;
+    padding: 20px; */
 }
 
 #right-column{
     background-color: teal;
-    width: 50%;
+    /* width: 50%;
     float: left;
     height: 100vh;
+    padding: 20px; */
 }
 
 #page-text{
@@ -35,7 +39,7 @@ body{
 
 #text-footer{
     background-color: cadetblue;
-    font-size: 30px;
+    font-size: 15px;
     bottom: 0;
     position: absolute;
     width: 49.5%;
@@ -51,7 +55,10 @@ body{
 
 #phone-display{
     background-color: antiquewhite;
-    height: 100vh;
+    width: 411px;
+    height: 731px;
+    
+   
 }
 
 /* #page-title{
