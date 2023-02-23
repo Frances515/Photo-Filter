@@ -7,30 +7,51 @@ body{
     overflow-y: hidden;
 }
 
-#page-text{
+/* .column{
     width: 50%;
     float: left;
-    background-color: aliceblue;
     height: 100vh;
+    
+} */
+
+#left-column{
+    background-color: red;
+    width: 50%;
+    float: left;
+    height: 100vh;
+}
+
+#right-column{
+    background-color: teal;
+    width: 50%;
+    float: left;
+    height: 100vh;
+}
+
+#page-text{
+    background-color: aliceblue;
     font-size: 70px;
 }
 
-#page-footer{
+#text-footer{
     background-color: cadetblue;
     font-size: 30px;
     bottom: 0;
     position: absolute;
-    width: 50%;
+    width: 49.5%;
     
 }
 
+#filter-text{
+    background: linear-gradient(to right, red , yellow);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+   
+}
+
 #phone-display{
-    width: 50%;
-    float: left;
     background-color: antiquewhite;
     height: 100vh;
-    
-
 }
 
 /* #page-title{
