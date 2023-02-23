@@ -1,8 +1,64 @@
+*{
+    box-sizing: border-box;
+}
 body{
     background-color: #01184A;
+    max-height: 100vh;
+    overflow-y: hidden;
+}
+
+#page-text{
+    width: 50%;
+    float: left;
+    background-color: aliceblue;
+    height: 100vh;
+    font-size: 70px;
+}
+
+#page-footer{
+    background-color: cadetblue;
+    font-size: 30px;
+    bottom: 0;
+    position: absolute;
+    width: 50%;
+    
+}
+
+#phone-display{
+    width: 50%;
+    float: left;
+    background-color: antiquewhite;
+    height: 100vh;
+    
+
+}
+
+/* #page-title{
+    background-color: coral;
+    width: 100%;
+    height: 10%;
+}
+
+#page-text{
+    font-size: 70px;
+    background-color: aliceblue;
+    width: 100%;
 }
 
 #grid{
     display: grid;
     grid-template-columns: auto auto;
 }
+
+.grid-item{
+    width: 50vw;
+    float: left;
+}
+
+#phone-display{
+    background-color: bisque;
+    height: 100%;
+    font-size: 70px;
+    width: 100%;
+} */
+
