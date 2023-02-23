@@ -59,7 +59,7 @@ body{
     padding-top: 80px; 
     background-color: black;
     width: 420px;
-    height: 750px;
+    height: 800px;
     border-radius: 20px;
     margin-left: auto;
     margin-right: auto;
@@ -80,6 +80,31 @@ body{
 }
 
 #slider #text{
+    color: #fff;
+}
+
+#range{
+    width: 300px;
+}
+
+#button-container{
+    padding: 10px;
+    
+}
+
+.filter-button{
+    border-radius: 100%;
+    /* padding: 10px; */
+    margin-right:20px;
+    height: 52px;
+    width: 52px;
+}
+
+#filter-container{
+    padding-top: 35px;
+}
+
+#filter-name{
     color: #fff;
 }
 
