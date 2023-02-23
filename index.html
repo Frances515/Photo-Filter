@@ -1,5 +1,7 @@
 <head>
   <link rel="stylesheet" href="styles.css" />
+  <script src="https://www.dukelearntoprogram.com/course1/common/js/image/SimpleImage.js"></script>
+  <script type="text/javascript" src="script.js"></script>
   <title>Photo Filter</title>
 </head>
 <body>
@@ -9,50 +11,49 @@
     </div>
 
     <div class="column" id="left-column">
-      <!-- <div id="page-text">
+      <div id="page-text">
               <h2>
-                Enhance your Photos with interesting
+                Enhance your photos with interesting
                 <span id="filter-text">filters!</span>
               </h2>
             </div>
-          </div>
-          <div id="subtext">
-            <p>Upload your photos and have fun with different filters</p>-->
-      
+            <div id="subtext">
+                <p>Upload your photos and have fun with different filters</p>
+            <!-- </div> -->
+            </div>
     </div>
+          
 
     <div class="column" id="right-column">
-        <div id="phone-display-container">
-                <div id="import-button">
-                    <input type="button" id="import-image-button" value="Import Image" onclick="import()" >
-                </div>
-                <canvas id="phone-screen"></canvas>
-                <div id="slider">
-                    <p id="text">Opacity</p>
-                    <input type="range" name="filter-strength" min="1" max="10" id="range">
-                </div>
-            
-                <div class="grid">
-                    <div class="grid-item-label"><label class="label">name</label></div>
-                    <div class="grid-item-label"><label class="label">name</label></div>
-                    <div class="grid-item-label"><label class="label">name</label></div>
-                    <div class="grid-item-label"><label class="label">name</label></div>
-
-                    <input type="button" value="filter1" id="filter1" class="grid-item-button" onclick="filter1()">
-                    <input type="button" value="filter1" id="filter1" class="grid-item-button" onclick="filter1()">
-                    <input type="button" value="filter1" id="filter1" class="grid-item-button" onclick="filter1()">
-                    <input type="button" value="filter1" id="filter1" class="grid-item-button" onclick="filter1()">
-
-                </div>
-                
-                
-            </div>
+      <div id="phone-display-container">
+        <div id="import-button">
+          <input type="file" id="upload-image-button" value="Upload Image" multiple="false" accept="image/*" onchange="upload()"/>
         </div>
-      
+        <canvas id="phone-screen"></canvas>
+        <div id="slider">
+          <p id="text">Opacity</p>
+          <input type="range" name="filter-strength" min="1" max="10" id="range" />
+        </div>
+
+        <div class="grid">
+          <div class="grid-item-label"><label class="label">name</label></div>
+          <div class="grid-item-label"><label class="label">name</label></div>
+          <div class="grid-item-label"><label class="label">name</label></div>
+          <div class="grid-item-label"><label class="label">name</label></div>
+
+          <input
+            type="button" value="filter1" id="grayscale" class="grid-item-button" onclick="grayscale()" />
+          <input type="button" value="filter1" id="filter1" class="grid-item-button" onclick="filter1()"/>
+          <input type="button" value="filter1" id="filter1" class="grid-item-button" onclick="filter1()"
+          />
+          <input type="button" value="filter1" id="filter1" class="grid-item-button" onclick="filter1()" />
+        </div>
+
+      </div>
     </div>
 
     <div id="text-footer">
-        <p>Designed and developed by Fran &hearts;</p>
-      </div>
+      <p>Designed and developed by Fran &hearts;</p>
+    </div>
   </div>
 </body>
