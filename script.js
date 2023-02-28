@@ -132,6 +132,10 @@ function paint(x,y){
     }
 }
 
+function clear(){
+    details.clearRect(0,0, paintcanvas.width, paintcanvas.height);
+}
+
 function colorTulip(){
     color = '#fc8585';
 }
@@ -161,7 +165,7 @@ function closePalette(){
     document.getElementById("draw-palette").style.display = "none";
     document.getElementById("close").style.display = "none";
     document.getElementById("grid").style.display = "grid";
-    radius = 0;
+    // radius = 0;
 }
 
 function drawing(){
@@ -169,6 +173,6 @@ function drawing(){
     document.getElementById("close-palette").style.display = "initial";
     document.getElementById("grid").style.display = "none";
     document.getElementById("draw").style.display = "initial";
-    radius = 10;
+    // radius = 10;
 }
 
