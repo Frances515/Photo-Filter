@@ -93,8 +93,11 @@ function reset(){
     if(isOriginal == true){
         image.drawTo(photo);
     }
-    else if(isOriginal == false){
-        details.clearRect(0,0, paintcanvas.width, paintcanvas.height);
+    // else if(isOriginal == false){
+    //     details.clearRect(0,0, paintcanvas.width, paintcanvas.height);
+    // }
+    else{
+        image.drawTo(photo);
     }
     
 
