@@ -28,33 +28,16 @@
         <div id="phone-display-container">
           <div id="function-buttons">
             <label for="discard-change-button" id="discard-label"
-              >Discard Changes</label
-            >
+              >Discard Changes</label>
             <input
-              type="button"
-              id="discard-change-button"
-              value="Discard Changes"
-              onclick="reset()"
-            />
+              type="button" id="discard-change-button" value="Discard Changes" onclick="reset()" />
             <label for="upload-image-button" id="upload-label">Upload</label>
-            <input
-              type="file"
-              id="upload-image-button"
-              value="Upload Image"
-              multiple="false"
-              accept="image/*"
-              onchange="upload()"
-            />
+            <input type="file" id="upload-image-button" value="Upload Image" multiple="false" accept="image/*" onchange="upload()"/>
           </div>
   
           <div>
             <canvas id="phone-screen"></canvas>
-            <canvas
-              id="draw"
-              onmousedown="start()"
-              onmousemove="paint(event.offsetX, event.offsetY)"
-              onmouseup="end()"
-            ></canvas>
+            <canvas id="draw" onmousedown="start()" onmousemove="paint(event.offsetX, event.offsetY)" onmouseup="end()"></canvas>
           </div>
   
           <p id="prompt">Choose a filter</p>
@@ -70,30 +53,10 @@
             </div>
             <div class="grid-item-label"><label class="label">Draw</label></div>
   
-            <input
-              type="button"
-              id="grayscale-filter"
-              class="grid-item-button"
-              onclick="grayscale()"
-            />
-            <input
-              type="button"
-              id="sunshine-filter"
-              class="grid-item-button"
-              onclick="sunshine()"
-            />
-            <input
-              type="button"
-              id="cool-filter"
-              class="grid-item-button"
-              onclick="palmtree()"
-            />
-            <input
-              type="button"
-              id="draw-filter"
-              class="grid-item-button"
-              onclick="drawing()"
-            />
+            <input type="button" id="grayscale-filter" class="grid-item-button" onclick="grayscale()"/>
+            <input type="button" id="sunshine-filter" class="grid-item-button" onclick="sunshine()"/>
+            <input type="button" id="cool-filter" class="grid-item-button" onclick="palmtree()"/>
+            <input type="button" id="draw-filter" class="grid-item-button" onclick="drawing()"/>
           </div>
   
           <div id="close-palette">
@@ -107,33 +70,17 @@
   
           <div id="draw-palette">
             <div id="palette">
-              <span id="tulip"
-                ><input type="button" onclick="colorTulip()"
-              /></span>
-              <span id="topaz"
-                ><input type="button" onclick="colorTopaz()"
-              /></span>
-              <span id="champagne"
-                ><input type="button" onclick="colorChampagne()"
-              /></span>
-              <span id="antique"
-                ><input type="button" onclick="colorAntique()"
-              /></span>
-              <span id="sky"><input type="button" onclick="colorSky()" /></span>
+              <span id="tulip"><input type="button" onclick="colorTulip()"/></span>
+              <span id="topaz"><input type="button" onclick="colorTopaz()"/></span>
+              <span id="champagne"><input type="button" onclick="colorChampagne()"/></span>
+              <span id="antique"><input type="button" onclick="colorAntique()"/></span>
+              <span id="sky"><input type="button" onclick="colorSky()"/></span>
             </div>
   
             <div id="brush-setting">
-              <label id="brush-name">Brush Size</label
-              ><output id="newSize">10</output>
+              <label id="brush-name">Brush Size</label><output id="newSize">10</output>
               <div>
-                <input
-                  type="range"
-                  id="brush-size"
-                  min="1"
-                  max="50"
-                  value="10"
-                  oninput="resizeBrush(this.value)"
-                />
+                <input type="range" id="brush-size" min="1" max="50" value="10" oninput="resizeBrush(this.value)"/>
               </div>
             </div>
           </div>

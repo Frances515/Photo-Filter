@@ -77,10 +77,11 @@ body{
 
 #draw{
     position: absolute;
-    right: 204;
     display: none;
     width: 400px;
     height: 500px;
+    top: 20;
+    right: 12.7%;
     
 }
 

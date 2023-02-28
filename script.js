@@ -93,9 +93,6 @@ function reset(){
     if(isOriginal == true){
         image.drawTo(photo);
     }
-    // else if(isOriginal == false){
-    //     details.clearRect(0,0, paintcanvas.width, paintcanvas.height);
-    // }
     else{
         image.drawTo(photo);
     }
@@ -106,7 +103,7 @@ function reset(){
 var paintcanvas = document.getElementById("draw");
 var details = paintcanvas.getContext("2d");
 var color = '#fc8585';
-var radius = 10;
+var radius = 50;
 var isDrawing = false;
 draw.width = 400;
 draw.height= 500;
@@ -132,7 +129,7 @@ function paint(x,y){
     }
 }
 
-function clear(){
+function clearPainting(){
     details.clearRect(0,0, paintcanvas.width, paintcanvas.height);
 }
 
@@ -164,15 +161,17 @@ function resizeBrush(newSize){
 function closePalette(){
     document.getElementById("draw-palette").style.display = "none";
     document.getElementById("close").style.display = "none";
+    document.getElementById("clear").style.display = "none";
     document.getElementById("grid").style.display = "grid";
-    // radius = 0;
+    radius = 0;
 }
 
 function drawing(){
     document.getElementById("draw-palette").style.display = "initial";
     document.getElementById("close-palette").style.display = "initial";
+    document.getElementById("clear").style.display = "initial";
     document.getElementById("grid").style.display = "none";
     document.getElementById("draw").style.display = "initial";
-    // radius = 10;
+    radius = 10;
 }
 
