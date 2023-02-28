@@ -82,6 +82,9 @@ body{
     position: absolute;
     right: 204;
     /* visibility: hidden; */
+    display: none;
+    width: 400px;
+    height: 500px;
     
 }
 
@@ -142,13 +145,12 @@ i{
 /* } */
 
 
-.grid{
-    /* display: grid; */
+#grid{
+    display: grid;
     grid-template-columns: auto auto auto auto;
     padding: 35px 0 35px 0;
     /* visibility: hidden; */
-    display: none;
-    /* display: inlin; */
+    /* display: none; */
     
 }
 
@@ -233,7 +235,7 @@ i{
     
 }
 
-#havana-filter:active{
+#draw-filter:active{
     background-color: #f2709c;
     animation: processing 5s infinite;
 }
@@ -286,8 +288,8 @@ i{
     min-height: 65px;
 }
 
-#havana-filter{
-    background-image: url("./images/Havana.png");
+#draw-filter{
+    background-image: url("./images/Draw.png");
     background-size: cover;
     border: none;
     min-width: 65px;
@@ -395,8 +397,30 @@ output{
     padding-top: 20px;
 }
 
+#close-palette{
+    margin: 0px 20px 20px 0px;
+    display: none;
+
+}
+
+#draw-palette{
+    display: none;
+}
+
 #close{
     background-color: transparent;
     border: none;
     text-decoration: none;
+    float: right;
+    
 }
+
+.ri-close-fill{
+    font-size: 20px;
+    color: #ffffff;
+}
+
+#palette{
+    margin-top: 20px;
+}
+

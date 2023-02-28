@@ -112,18 +112,24 @@ function palmtree(){
 
 function reset(){
     var photo = document.getElementById("phone-screen");
+
     if(isOriginal == true){
         image.drawTo(photo);
     }
-    else{
-        image.drawTo(photo);
+    // else{
+    //     image.drawTo(photo);
+    // }
+    else if(isOriginal == false){
+        details.clearRect(0,0, paintcanvas.width, paintcanvas.height);
     }
+    
+
 }
 
 var paintcanvas = document.getElementById("draw");
 var details = paintcanvas.getContext("2d");
 var color = 'black';
-var radius = 100;
+var radius = 10;
 var isDrawing = false;
 draw.width = 400;
 draw.height= 500;
@@ -172,5 +178,20 @@ function colorSky(){
 function resizeBrush(newSize){
     radius = newSize;
     document.getElementById("newSize").value = newSize;
+}
+
+function closePalette(){
+    document.getElementById("draw-palette").style.display = "none";
+    document.getElementById("close").style.display = "none";
+    document.getElementById("grid").style.display = "grid";
+    radius = 0;
+}
+
+function drawing(){
+    document.getElementById("draw-palette").style.display = "initial";
+    document.getElementById("close-palette").style.display = "initial";
+    document.getElementById("grid").style.display = "none";
+    document.getElementById("draw").style.display = "initial";
+    radius = 10;
 }
 

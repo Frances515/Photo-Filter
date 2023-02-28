@@ -45,7 +45,7 @@
           <input type="range" name="filter-strength" min="1" max="10" id="range" />
         </div> -->
         <p id="prompt">Choose a filter</p>
-        <div class="grid">
+        <div id="grid">
           <div class="grid-item-label"><label class="label">Grayscale</label></div>
           <div class="grid-item-label"><label class="label">Sunshine</label></div>
           <!-- <div class="grid-item-label"><label class="label">Havana</label></div> -->
@@ -58,26 +58,35 @@
           <input type="button" id="sunshine-filter" class="grid-item-button" onclick="sunshine()"/>
           <!-- <input type="button" id="havana-filter" class="grid-item-button" onclick="havana()"/> -->
           <input type="button" id="cool-filter" class="grid-item-button" onclick="palmtree()"/>
+          <input type="button" id="draw-filter" class="grid-item-button" onclick="drawing()"/>
+
         </div>
 
-        <div id="draw-palette">
-          <div id="close-palette">
-            <button id="close"><i class="ri-close-fill"></i></button>
-          </div>
-          <span id="tulip"><input type="button" onclick="colorTulip()"></span>
-          <span id="topaz"><input type="button" onclick="colorTopaz()"></span>
-          <span id="champagne"><input type="button" onclick="colorChampagne()"></span>
-          <span id="antique"><input type="button" onclick="colorAntique()"></span>
-          <span id="sky"><input type="button" onclick="colorSky()"></span>
+        <div id="close-palette">
+          <button id="close" onclick="closePalette()"><i class="ri-close-fill"></i></button>
+        </div>
+        <!-- <button id="close" onclick="closePalette()"><i class="ri-close-fill"></i></button> -->
 
+        <div id="draw-palette">
+          
+          <div id="palette">
+            <span id="tulip"><input type="button" onclick="colorTulip()"></span>
+            <span id="topaz"><input type="button" onclick="colorTopaz()"></span>
+            <span id="champagne"><input type="button" onclick="colorChampagne()"></span>
+            <span id="antique"><input type="button" onclick="colorAntique()"></span>
+            <span id="sky"><input type="button" onclick="colorSky()"></span>
+
+          </div>
+          
           <div id="brush-setting">
-            <label id="brush-name">Brush Size</label><output id="newSize">50</output>
+            <label id="brush-name">Brush Size</label><output id="newSize">10</output>
             <div>
-              <input type="range" id="brush-size" min="1" max="50" value="50" oninput="resizeBrush(this.value)"/>
+              <input type="range" id="brush-size" min="1" max="50" value="10" oninput="resizeBrush(this.value)"/>
             </div>
           </div>
 
         </div>
+
 
       </div>
     </div>
