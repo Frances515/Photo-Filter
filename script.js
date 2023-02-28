@@ -169,3 +169,8 @@ function colorSky(){
     color = '#85cbd9';
 }
 
+function resizeBrush(newSize){
+    radius = newSize;
+    document.getElementById("newSize").value = newSize;
+}
+

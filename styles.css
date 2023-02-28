@@ -339,14 +339,64 @@ i{
     background-color: #fc8585;
     border: none;
     text-decoration: none;
-    color: blue;
     width: 50px;
     height: 50px;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
 }
 
-#tulip input[type= button]:active{
-    border: 5px solid green;
+#topaz input[type= button]{
+    background-color: #ffc86d;
+    border: none;
+    text-decoration: none;
+    width: 50px;
+    height: 50px;
 }
 
+#champagne input[type= button]{
+    background-color: #fbdba2;
+    border: none;
+    text-decoration: none;
+    width: 50px;
+    height: 50px;
+}
+
+#antique input[type= button]{
+    background-color: #f6eadb;
+    border: none;
+    text-decoration: none;
+    width: 50px;
+    height: 50px;
+}
+
+#sky input[type= button]{
+    background-color: #85cbd9;
+    border: none;
+    text-decoration: none;
+    width: 50px;
+    height: 50px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+#brush-setting{
+    margin-top: 20px;
+}
+
+#brush-name{
+    padding-right: 10px;
+}
+
+output{
+    padding-left: 10px;
+}
+
+#brush-size{
+    padding-top: 20px;
+}
+
+#close{
+    background-color: transparent;
+    border: none;
+    text-decoration: none;
+}

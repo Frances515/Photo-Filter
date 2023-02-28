@@ -61,13 +61,23 @@
         </div>
 
         <div id="draw-palette">
+          <div id="close-palette">
+            <button id="close"><i class="ri-close-fill"></i></button>
+          </div>
           <span id="tulip"><input type="button" onclick="colorTulip()"></span>
-          <span id="topaz"><input type="button" value="#000" onclick="colorTopaz()"></span>
-          <span id="champagne"><input type="button" value="#000" onclick="colorChampagne()"></span>
-          <span id="antique"><input type="button" value="#000" onclick="colorAntique()"></span>
-          <span id="sky"><input type="button" value="#000" onclick="colorSky()"></span>
-        </div>
+          <span id="topaz"><input type="button" onclick="colorTopaz()"></span>
+          <span id="champagne"><input type="button" onclick="colorChampagne()"></span>
+          <span id="antique"><input type="button" onclick="colorAntique()"></span>
+          <span id="sky"><input type="button" onclick="colorSky()"></span>
 
+          <div id="brush-setting">
+            <label id="brush-name">Brush Size</label><output id="newSize">50</output>
+            <div>
+              <input type="range" id="brush-size" min="1" max="50" value="50" oninput="resizeBrush(this.value)"/>
+            </div>
+          </div>
+
+        </div>
 
       </div>
     </div>
