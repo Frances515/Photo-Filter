@@ -86,7 +86,6 @@ function palmtree(){
     } 
 }
 
-
 function reset(){
     var photo = document.getElementById("phone-screen");
 
@@ -96,14 +95,12 @@ function reset(){
     else{
         image.drawTo(photo);
     }
-    
-
 }
 
 var paintcanvas = document.getElementById("draw");
 var details = paintcanvas.getContext("2d");
 var color = '#fc8585';
-var radius = 50;
+var radius = 10;
 var isDrawing = false;
 draw.width = 400;
 draw.height= 500;
