@@ -1,10 +1,10 @@
-{/* <script src="https://www.dukelearntoprogram.com/course1/common/js/image/SimpleImage.js"></script> */}
+
 
 var image;
 var gray;
 var sunny;
 var rodeo;
-// var photo;
+var cool;
 var isLoaded = false;
 var isOriginal = false;
 
@@ -15,6 +15,7 @@ function upload(){
     gray = new SimpleImage(img);
     sunny = new SimpleImage(img);
     rodeo = new SimpleImage(img);
+    cool = new SimpleImage(img);
     var photo = document.getElementById("phone-screen");
     image.drawTo(photo);
     isLoaded = true;
@@ -64,42 +65,107 @@ function sunshine(){
     } 
 }
 
-function setHavana(){
-    for(var pixel of rodeo.values()){
+// function setHavana(){
+//     for(var pixel of rodeo.values()){
+//         var redPixel = pixel.getRed();
+//         var greenPixel = pixel.getGreen();
+//         var bluePixel = pixel.getBlue();
+//         var average = (redPixel + greenPixel + bluePixel)/3;
+//         // average /= 1.5;
+//         pixel.setRed(average);
+//         pixel.setGreen(average /1.33);
+//         pixel.setBlue(average/1.26);
+//     }
+// }
+
+// function havana(){
+//     if(isLoaded == true){
+//         setHavana();
+//         var photo = document.getElementById("phone-screen");
+//         rodeo.drawTo(photo);
+//         isOriginal = false;
+//     } 
+// }
+
+function setPalm(){
+    for(var pixel of cool.values()){
         var redPixel = pixel.getRed();
         var greenPixel = pixel.getGreen();
         var bluePixel = pixel.getBlue();
         var average = (redPixel + greenPixel + bluePixel)/3;
-        pixel.setRed(average);
-        pixel.setGreen(average /1.33);
-        pixel.setBlue(average/1.26);
-
-        // var red = 240;
-        // var green = 66;
-        // var blue = 196;
-        // if(redPixel > red){
-        //     pixel.setRed(red);
-        //     pixel.setGreen(red /3.38);
-        //     pixel.setBlue(red/7.5);
-        // }
-        // else if(redPixel < greenPixel && greenPixel > bluePixel && greenPixel > green){
-        //     pixel.setRed(green * 2.41);
-        //     pixel.setGreen(green);
-        //     pixel.setBlue(green *1.97);
-        // }
-        // else if (bluePixel < redPixel && greenPixel < bluePixel && bluePixel > blue){
-        //     pixel.setRed(blue *1.26);
-        //     pixel.setGreen(blue / 6.125);
-        //     pixel.setBlue(blue);
-        // }
+        // average /= 1.2;
+        pixel.setRed(average/1.17);
+        pixel.setGreen(average * 1.02);
+        pixel.setBlue(average / 1.04);
     }
 }
 
-function havana(){
+function palmtree(){
     if(isLoaded == true){
-        setHavana();
+        setPalm();
         var photo = document.getElementById("phone-screen");
-        rodeo.drawTo(photo);
+        cool.drawTo(photo);
         isOriginal = false;
     } 
 }
+
+
+function reset(){
+    var photo = document.getElementById("phone-screen");
+    if(isOriginal == true){
+        image.drawTo(photo);
+    }
+    else{
+        image.drawTo(photo);
+    }
+}
+
+var paintcanvas = document.getElementById("draw");
+var details = paintcanvas.getContext("2d");
+var color = 'black';
+var radius = 100;
+var isDrawing = false;
+draw.width = 400;
+draw.height= 500;
+
+function strokes(x,y){
+    details.beginPath();
+    details.arc(x,y,radius, 0,Math.PI * 2, true);
+    details.fillStyle = color;
+    details.fill();
+}
+
+function start(){
+    isDrawing = true;
+}
+
+function end(){
+    isDrawing = false;
+}
+
+function paint(x,y){
+    if(isDrawing == true){
+        strokes(x,y);
+    }
+}
+
+function colorTulip(){
+    color = ' #fc8585';
+}
+
+function colorTopaz(){
+    color = '#ffc86d';
+}
+
+function colorChampagne(){
+    color = '#fbdba2';
+}
+
+function colorAntique(){
+    color = '#f6eadb';
+}
+
+function colorSky(){
+    color = '#85cbd9';
+}
+

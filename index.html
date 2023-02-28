@@ -1,7 +1,7 @@
 <head>
   <link rel="stylesheet" href="styles.css" />
-  <script src="https://www.dukelearntoprogram.com/course1/common/js/image/SimpleImage.js"></script>
-  <script type="text/javascript" src="script.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+ 
   <title>Photo Filter</title>
 </head>
 <body>
@@ -26,28 +26,48 @@
 
     <div class="column" id="right-column">
       <div id="phone-display-container">
-        <div id="import-button">
-            <label for="upload-image-button" id="upload-label">Upload</label>
+        <div id="function-buttons">
+          <label for="discard-change-button" id="discard-label">Discard Changes</label>
+          <input type="button" id="discard-change-button" value="Discard Changes" onclick="reset()" />
+          <label for="upload-image-button" id="upload-label">Upload</label>
           <input type="file" id="upload-image-button" value="Upload Image" multiple="false" accept="image/*" onchange="upload()"/>
         </div>
-        <canvas id="phone-screen"></canvas>
-        <div id="slider">
+        
+        
+        <div>
+          <canvas id="phone-screen"></canvas>
+          <canvas id="draw" onmousedown="start()" onmousemove="paint(event.offsetX, event.offsetY)" onmouseup="end()"></canvas>
+          
+        </div>
+        
+        <!-- <div id="slider">
           <p id="text">Opacity</p>
           <input type="range" name="filter-strength" min="1" max="10" id="range" />
-        </div>
-
+        </div> -->
+        <p id="prompt">Choose a filter</p>
         <div class="grid">
           <div class="grid-item-label"><label class="label">Grayscale</label></div>
           <div class="grid-item-label"><label class="label">Sunshine</label></div>
-          <div class="grid-item-label"><label class="label">name</label></div>
-          <div class="grid-item-label"><label class="label">name</label></div>
+          <!-- <div class="grid-item-label"><label class="label">Havana</label></div> -->
+          <div class="grid-item-label"><label class="label">Palm Tree</label></div>
+          <div class="grid-item-label"><label class="label">Draw</label></div>
 
-          <input type="button" value="gray" id="grayscale" class="grid-item-button" onclick="grayscale()" />
-          <input type="button" value="sunshine" id="sunshine" class="grid-item-button" onclick="sunshine()"/>
-          <input type="button" value="havana" id="havana" class="grid-item-button" onclick="havana()"
-          />
-          <input type="button" value="filter1" id="filter1" class="grid-item-button" onclick="filter1()" />
+
+          
+          <input type="button" id="grayscale-filter" class="grid-item-button" onclick="grayscale()" />
+          <input type="button" id="sunshine-filter" class="grid-item-button" onclick="sunshine()"/>
+          <!-- <input type="button" id="havana-filter" class="grid-item-button" onclick="havana()"/> -->
+          <input type="button" id="cool-filter" class="grid-item-button" onclick="palmtree()"/>
         </div>
+
+        <div id="draw-palette">
+          <span id="tulip"><input type="button" onclick="colorTulip()"></span>
+          <span id="topaz"><input type="button" value="#000" onclick="colorTopaz()"></span>
+          <span id="champagne"><input type="button" value="#000" onclick="colorChampagne()"></span>
+          <span id="antique"><input type="button" value="#000" onclick="colorAntique()"></span>
+          <span id="sky"><input type="button" value="#000" onclick="colorSky()"></span>
+        </div>
+
 
       </div>
     </div>
@@ -57,3 +77,6 @@
     </div>
   </div>
 </body>
+<script type="text/javascript" src="script.js"></script>
+<script src="https://www.dukelearntoprogram.com/course1/common/js/image/SimpleImage.js"></script>
+
