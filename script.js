@@ -30,8 +30,7 @@ function setGrayscale(){
         var average = (redPixel + greenPixel + bluePixel)/3;
         pixel.setRed(average);
         pixel.setGreen(average);
-        pixel.setBlue(average);
-        
+        pixel.setBlue(average);   
     }
 }
 
@@ -65,28 +64,6 @@ function sunshine(){
     } 
 }
 
-// function setHavana(){
-//     for(var pixel of rodeo.values()){
-//         var redPixel = pixel.getRed();
-//         var greenPixel = pixel.getGreen();
-//         var bluePixel = pixel.getBlue();
-//         var average = (redPixel + greenPixel + bluePixel)/3;
-//         // average /= 1.5;
-//         pixel.setRed(average);
-//         pixel.setGreen(average /1.33);
-//         pixel.setBlue(average/1.26);
-//     }
-// }
-
-// function havana(){
-//     if(isLoaded == true){
-//         setHavana();
-//         var photo = document.getElementById("phone-screen");
-//         rodeo.drawTo(photo);
-//         isOriginal = false;
-//     } 
-// }
-
 function setPalm(){
     for(var pixel of cool.values()){
         var redPixel = pixel.getRed();
@@ -116,9 +93,6 @@ function reset(){
     if(isOriginal == true){
         image.drawTo(photo);
     }
-    // else{
-    //     image.drawTo(photo);
-    // }
     else if(isOriginal == false){
         details.clearRect(0,0, paintcanvas.width, paintcanvas.height);
     }
@@ -128,7 +102,7 @@ function reset(){
 
 var paintcanvas = document.getElementById("draw");
 var details = paintcanvas.getContext("2d");
-var color = 'black';
+var color = '#fc8585';
 var radius = 10;
 var isDrawing = false;
 draw.width = 400;
@@ -156,7 +130,7 @@ function paint(x,y){
 }
 
 function colorTulip(){
-    color = ' #fc8585';
+    color = '#fc8585';
 }
 
 function colorTopaz(){

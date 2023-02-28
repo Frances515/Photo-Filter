@@ -1,101 +1,149 @@
-<head>
-  <link rel="stylesheet" href="styles.css" />
-  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
- 
-  <title>Photo Filter</title>
-</head>
-<body>
-  <div id="container">
-    <div id="page-title">
-      <h4>Beautify</h4>
-    </div>
-
-    <div class="column" id="left-column">
-      <div id="page-text">
-              <h2>
-                Enhance your photos with interesting
-                <span id="filter-text">filters!</span>
-              </h2>
-            </div>
-            <div id="subtext">
-                <p>Upload your photos and have fun with different filters</p>
-            <!-- </div> -->
-            </div>
-    </div>
-          
-
-    <div class="column" id="right-column">
-      <div id="phone-display-container">
-        <div id="function-buttons">
-          <label for="discard-change-button" id="discard-label">Discard Changes</label>
-          <input type="button" id="discard-change-button" value="Discard Changes" onclick="reset()" />
-          <label for="upload-image-button" id="upload-label">Upload</label>
-          <input type="file" id="upload-image-button" value="Upload Image" multiple="false" accept="image/*" onchange="upload()"/>
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet"/>
+  
+    <title>Photo Filter</title>
+  </head>
+  <body>
+    <div id="container">
+      <div id="page-title">
+        <h4>Filter Me!</h4>
+      </div>
+  
+      <div class="column" id="left-column">
+        <div id="page-text">
+          <h2>
+            Enhance your photos with interesting <span id="filter-text">filters!</span>
+          </h2>
         </div>
-        
-        
-        <div>
-          <canvas id="phone-screen"></canvas>
-          <canvas id="draw" onmousedown="start()" onmousemove="paint(event.offsetX, event.offsetY)" onmouseup="end()"></canvas>
-          
+        <div id="subtext">
+          <p>Upload your photos and have fun with different filters</p>
         </div>
-        
-        <!-- <div id="slider">
-          <p id="text">Opacity</p>
-          <input type="range" name="filter-strength" min="1" max="10" id="range" />
-        </div> -->
-        <p id="prompt">Choose a filter</p>
-        <div id="grid">
-          <div class="grid-item-label"><label class="label">Grayscale</label></div>
-          <div class="grid-item-label"><label class="label">Sunshine</label></div>
-          <!-- <div class="grid-item-label"><label class="label">Havana</label></div> -->
-          <div class="grid-item-label"><label class="label">Palm Tree</label></div>
-          <div class="grid-item-label"><label class="label">Draw</label></div>
-
-
-          
-          <input type="button" id="grayscale-filter" class="grid-item-button" onclick="grayscale()" />
-          <input type="button" id="sunshine-filter" class="grid-item-button" onclick="sunshine()"/>
-          <!-- <input type="button" id="havana-filter" class="grid-item-button" onclick="havana()"/> -->
-          <input type="button" id="cool-filter" class="grid-item-button" onclick="palmtree()"/>
-          <input type="button" id="draw-filter" class="grid-item-button" onclick="drawing()"/>
-
-        </div>
-
-        <div id="close-palette">
-          <button id="close" onclick="closePalette()"><i class="ri-close-fill"></i></button>
-        </div>
-        <!-- <button id="close" onclick="closePalette()"><i class="ri-close-fill"></i></button> -->
-
-        <div id="draw-palette">
-          
-          <div id="palette">
-            <span id="tulip"><input type="button" onclick="colorTulip()"></span>
-            <span id="topaz"><input type="button" onclick="colorTopaz()"></span>
-            <span id="champagne"><input type="button" onclick="colorChampagne()"></span>
-            <span id="antique"><input type="button" onclick="colorAntique()"></span>
-            <span id="sky"><input type="button" onclick="colorSky()"></span>
-
+      </div>
+  
+      <div class="column" id="right-column">
+        <div id="phone-display-container">
+          <div id="function-buttons">
+            <label for="discard-change-button" id="discard-label"
+              >Discard Changes</label
+            >
+            <input
+              type="button"
+              id="discard-change-button"
+              value="Discard Changes"
+              onclick="reset()"
+            />
+            <label for="upload-image-button" id="upload-label">Upload</label>
+            <input
+              type="file"
+              id="upload-image-button"
+              value="Upload Image"
+              multiple="false"
+              accept="image/*"
+              onchange="upload()"
+            />
           </div>
-          
-          <div id="brush-setting">
-            <label id="brush-name">Brush Size</label><output id="newSize">10</output>
-            <div>
-              <input type="range" id="brush-size" min="1" max="50" value="10" oninput="resizeBrush(this.value)"/>
+  
+          <div>
+            <canvas id="phone-screen"></canvas>
+            <canvas
+              id="draw"
+              onmousedown="start()"
+              onmousemove="paint(event.offsetX, event.offsetY)"
+              onmouseup="end()"
+            ></canvas>
+          </div>
+  
+          <p id="prompt">Choose a filter</p>
+          <div id="grid">
+            <div class="grid-item-label">
+              <label class="label">Grayscale</label>
+            </div>
+            <div class="grid-item-label">
+              <label class="label">Sunshine</label>
+            </div>
+            <div class="grid-item-label">
+              <label class="label">Palm Tree</label>
+            </div>
+            <div class="grid-item-label"><label class="label">Draw</label></div>
+  
+            <input
+              type="button"
+              id="grayscale-filter"
+              class="grid-item-button"
+              onclick="grayscale()"
+            />
+            <input
+              type="button"
+              id="sunshine-filter"
+              class="grid-item-button"
+              onclick="sunshine()"
+            />
+            <input
+              type="button"
+              id="cool-filter"
+              class="grid-item-button"
+              onclick="palmtree()"
+            />
+            <input
+              type="button"
+              id="draw-filter"
+              class="grid-item-button"
+              onclick="drawing()"
+            />
+          </div>
+  
+          <div id="close-palette">
+            <button id="close" onclick="closePalette()">
+              <i class="ri-close-fill"></i>
+            </button>
+          </div>
+  
+          <div id="draw-palette">
+            <div id="palette">
+              <span id="tulip"
+                ><input type="button" onclick="colorTulip()"
+              /></span>
+              <span id="topaz"
+                ><input type="button" onclick="colorTopaz()"
+              /></span>
+              <span id="champagne"
+                ><input type="button" onclick="colorChampagne()"
+              /></span>
+              <span id="antique"
+                ><input type="button" onclick="colorAntique()"
+              /></span>
+              <span id="sky"><input type="button" onclick="colorSky()" /></span>
+            </div>
+  
+            <div id="brush-setting">
+              <label id="brush-name">Brush Size</label
+              ><output id="newSize">10</output>
+              <div>
+                <input
+                  type="range"
+                  id="brush-size"
+                  min="1"
+                  max="50"
+                  value="10"
+                  oninput="resizeBrush(this.value)"
+                />
+              </div>
             </div>
           </div>
-
         </div>
-
-
+      </div>
+  
+      <div id="text-footer">
+        <p>Designed and developed by Fran &hearts;</p>
       </div>
     </div>
+  </body>
+  <script type="text/javascript" src="script.js"></script>
+  <script src="https://www.dukelearntoprogram.com/course1/common/js/image/SimpleImage.js"></script>
+</html>
 
-    <div id="text-footer">
-      <p>Designed and developed by Fran &hearts;</p>
-    </div>
-  </div>
-</body>
-<script type="text/javascript" src="script.js"></script>
-<script src="https://www.dukelearntoprogram.com/course1/common/js/image/SimpleImage.js"></script>
 

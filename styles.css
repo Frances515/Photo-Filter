@@ -3,8 +3,17 @@
 }
 body{
     background-color: rgb(252, 236, 202);
+    background-image: url("./images/background.png");
     max-height: 100vh;
     overflow-y: hidden;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#page-title{
+    background: linear-gradient(to right, #A8515D ,  #F3B85F);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
 }
 
 .column{
@@ -15,44 +24,31 @@ body{
     
 }
 
-
-#left-column{
-    /* width: 50%;
-    float: left;
-    height: 100vh;
-    padding: 20px; */
-}
-
-#right-column{
-    /* background-color: teal; */
-    /* width: 50%;
-    float: left;
-    height: 100vh;
-    padding: 20px; */
-}
-
 #page-text{
     font-size: 70px;
 }
 
 #text-footer{
-    background-color: cadetblue;
-    font-size: 15px;
+    font-size: 10px;
     bottom: 0;
     position: absolute;
     width: 49.5%;
-    
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(85,85,85);
+}
+
+#subtext{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 #filter-text{
-    background: linear-gradient(to right, #A8515D ,  #F3B85F);
+    background: linear-gradient(to right, #9D50BB ,  #6E48AA);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
    
 }
 
 #phone-display-container{
-    /* padding: 30px; */
     text-align: center;
     padding-top: 20px; 
     background-color: rgb(36, 34, 45);
@@ -67,12 +63,11 @@ body{
 #phone-display{
     background-color: antiquewhite;
     width: 411px;
-    height: 731px;
-   
+    height: 731px;  
 }
 
 #phone-screen{
-    background-color: rgb(95, 169, 180);
+    background-color: rgb(0,0,0);
     width: 400px;
     height: 500px;
     position: relative;  
@@ -81,7 +76,6 @@ body{
 #draw{
     position: absolute;
     right: 204;
-    /* visibility: hidden; */
     display: none;
     width: 400px;
     height: 500px;
@@ -97,8 +91,7 @@ body{
 }
 
 #button-container{
-    padding: 10px;
-    
+    padding: 10px;  
 }
 
 #filter-container{
@@ -113,7 +106,8 @@ body{
     margin: 10px 25px 0px 0px;
     float: right;
     font-size: 15px;
-    /* display: block; */
+    color: #f6eadb;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 #upload-image-button{
@@ -124,38 +118,25 @@ body{
     margin: 10px 0px 0px 25px;
     float: left;
     font-size: 15px;
-    /* display: block; */
+    color: #f6eadb;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 #discard-change-button{
     opacity: 0;
-    /* visibility: hidden; */
 }
 
 i{
     padding-right: 5px;
 }
 
-/* #upload-label:hover{ */
-    /* background-color: rgba(95, 169, 180, 0.5); */
-    /* padding: 2px 10px 2px 10px; */
-    /* margin: 0px 10px 9px 0px; */
-    /* height: 30px;
-    width: 120px; */
-/* } */
-
-
 #grid{
     display: grid;
     grid-template-columns: auto auto auto auto;
     padding: 35px 0 35px 0;
-    /* visibility: hidden; */
-    /* display: none; */
-    
 }
 
 .grid-item-label{
-    /* text-align: center; */
     margin: auto;
 }
 
@@ -163,20 +144,10 @@ i{
     height: 53px;
     width: 53px;
     border-radius: 50%;
-    /* margin: auto; */
     float: right;
     margin: 10px 0px 0px 25px;
     text-decoration: none;
     background-color: transparent;
-}
-
-/* .grid-item-button:hover{
-    background-color: rgba(0,0,0, 0.3);
-} */
-
-#filter1{
-    /* margin: 10px 0px 0px 25px; */
-   
 }
 
 #grayscale-filter{
@@ -187,10 +158,6 @@ i{
     min-height: 65px;
 }
 
-.grid-item-button:active{
-    border: red;
-}
-
 #grayscale-filter:active{
     background-color: #f2709c;
     animation: processing 5s infinite;
@@ -198,11 +165,9 @@ i{
 
 @keyframes processing {
     from {
-        /* border-color:#f2709c; */
         background-color: #f2709c;
     }
     to{
-        /* border-color:#9bc5c3; */
         background-color: #ff9472;
 
     }
@@ -211,6 +176,14 @@ i{
         background-color: #ffc500;
     }
     
+}
+
+#sunshine-filter{
+    background-image: url("./images/Sunshine.png");
+    background-size: cover;
+    border: none;
+    min-width: 65px;
+    min-height: 65px;
 }
 
 #sunshine-filter:active{
@@ -220,11 +193,9 @@ i{
 
 @keyframes processing {
     from {
-        /* border-color:#f2709c; */
         background-color: #f2709c;
     }
     to{
-        /* border-color:#9bc5c3; */
         background-color: #ff9472;
 
     }
@@ -233,6 +204,14 @@ i{
         background-color: #ffc500;
     }
     
+}
+
+#draw-filter{
+    background-image: url("./images/Draw.png");
+    background-size: cover;
+    border: none;
+    min-width: 65px;
+    min-height: 65px;
 }
 
 #draw-filter:active{
@@ -257,6 +236,14 @@ i{
     
 }
 
+#cool-filter{
+    background-image: url("./images/Cool.png");
+    background-size: cover;
+    border: none;
+    min-width: 65px;
+    min-height: 65px;
+}
+
 #cool-filter:active{
     background-color: #f2709c;
     animation: processing 5s infinite;
@@ -279,62 +266,10 @@ i{
     
 }
 
-
-#sunshine-filter{
-    background-image: url("./images/Sunshine.png");
-    background-size: cover;
-    border: none;
-    min-width: 65px;
-    min-height: 65px;
-}
-
-#draw-filter{
-    background-image: url("./images/Draw.png");
-    background-size: cover;
-    border: none;
-    min-width: 65px;
-    min-height: 65px;
-}
-
-#cool-filter{
-    background-image: url("./images/Cool.png");
-    background-size: cover;
-    border: none;
-    min-width: 65px;
-    min-height: 65px;
-}
-
-/* #page-title{
-    background-color: coral;
-    width: 100%;
-    height: 10%;
-}
-
-#page-text{
-    font-size: 70px;
-    background-color: aliceblue;
-    width: 100%;
-}
-
-#grid{
-    display: grid;
-    grid-template-columns: auto auto;
-}
-
-.grid-item{
-    width: 50vw;
-    float: left;
-}
-
-#phone-display{
-    background-color: bisque;
-    height: 100%;
-    font-size: 70px;
-    width: 100%;
-} */
-
 #prompt{
     padding-top: 20px;
+    color: #f6eadb;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 #tulip input[type= button]{
@@ -424,3 +359,7 @@ output{
     margin-top: 20px;
 }
 
+.label{
+    color: #f6eadb;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
